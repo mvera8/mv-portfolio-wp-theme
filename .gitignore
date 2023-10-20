@@ -1,0 +1,11 @@
+#Database
+db/
+
+#Node Modules
+node_modules/
+
+#DS_STORE
+**/.DS_Store
+
+#Docker folder
+docker/

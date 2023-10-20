@@ -1,0 +1,28 @@
+
+// GENERAL
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+	font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  @include OpenSansRegular();
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	@include OpenSansBold();
+}
