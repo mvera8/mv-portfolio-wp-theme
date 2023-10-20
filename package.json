@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r source/css/*",
+    "build": "yarn scss",
+    "lint-scss": "stylelint source/scss/*.scss --syntax scss || true",
+    "scss": "node-sass source/scss/ --output source/css/ --output-style compressed",
+    "watchcss": "onchange 'source/scss/' '!(_*)' -- yarn scss && yarn autoprefixer",
+		"watchjs": "onchange 'source/js/' -- npx babel source/js --out-dir source/dist/js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Vera",
+  "license": "ISC",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "autoprefixer": "^6.3.6",
+    "node-sass": "^4.13.1",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^2.5.2",
+    "stylelint": "^7.8.0"
+  }
+}
