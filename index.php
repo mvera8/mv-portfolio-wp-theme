@@ -1,39 +1,34 @@
 <?php
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+$criticals = array(
+	'navbar',
+);
+set_query_var( 'portfolio_critical', $criticals );
+
 $site_name = get_bloginfo( 'name' );
 
 get_header();
-get_component(
-	'navbar',
-	array(
-		'brand' => $site_name,
-	)
-);
+get_component( 'navbar', ['brand' => $site_name] );
 ?>
 
-<section id="component-hero" class="pt-5">
-	<div class="container py-5">
-		<div class="row">
-			<div class="col-12 col-md-8">
-				<h6 class="mb-0"><span class="badge bg-light text-secondary">About Me</span></h6>
-				<h1 class="mb-5 display-1">Figma to <span class="text-gradient">{WordPress}</span> quicly and easy.</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero odio. Phasellus aliquam feugiat elit, sed mollis neque bibendum lacinia.</p>
-			</div>
-		</div>
-	</div>
-</section>
-
 <main>
-	<div class="container">
-
-		<div class="row">
-			<div class="col-12 col-md-6">
-				<?php // get_template_part( 'components/card', 'news' ); ?>
+	<section class="py-5">
+		<div class="container">
+			<div class="row">
+				<?php
+				if ( have_posts()) :
+					while(have_posts()) :
+						the_post();
+						get_component( 'blog-card' );
+					endwhile;
+				endif;
+				?>
 			</div>
 		</div>
-
-	</div>
+	</section>
 </main>
-
 
 <?php
 get_footer();

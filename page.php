@@ -4,9 +4,15 @@ defined( 'ABSPATH' ) || exit;
 
 // https://www.opendoorscareers.com/post-a-job
 
+$criticals = array(
+	'navbar',
+);
+set_query_var( 'portfolio_critical', $criticals );
+
+$site_name = get_bloginfo( 'name' );
 
 get_header();
-get_template_part( 'components/navbar' );
+get_component( 'navbar', ['brand' => $site_name] );
 ?>
 
 <section class="py-5">

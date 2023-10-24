@@ -28,7 +28,7 @@ $brand = $args['brand'] ?? '';
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'primary-nav',
-					'container_class' => 'collapse navbar-collapse',
+					'container_class' => 'collapse navbar-collapse pe-5',
 					'container_id'    => 'navbarSupportedContent',
 					'menu_class'      => 'navbar-nav mx-auto',
 					'fallback_cb'     => '',
