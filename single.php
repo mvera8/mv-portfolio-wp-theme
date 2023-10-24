@@ -5,7 +5,6 @@ defined( 'ABSPATH' ) || exit;
 // https://www.opendoorscareers.com/post-a-job
 // https://github.blog/changelog/2023-06-13-github-actions-all-actions-will-run-on-node16-instead-of-node12-by-default/
 
-
 $criticals = array(
 	'navbar',
 );

@@ -20,7 +20,7 @@ $servicios = $args['services'] ?? array();
 				<div class="pe-5">
 					<span class="lala">Ready to Use Tailwind CSS Web Template.</span>
 					<h1 class="mb-4">Tailwind Template for <span class="text-gradient">App & Software</span> Site.</h1><!-- Web Developer / UI/UX Designer/ QA Tester -->
-					<p class="lead text-gray-200">All in one Tailwind CSS site template for - App and Software sites Comes with all essential components. <?php get_emoji( 'sunglasses', 30 ); ?></p>
+					<p class="lead text-gray-200 pe-5">All in one Tailwind CSS site template for - App and Software sites Comes with all essential components. <?php get_emoji( 'sunglasses', 30 ); ?></p>
 					<a href="#" class="btn btn-dark btn-lg me-3">
 						Download Now
 					</a>
@@ -54,14 +54,15 @@ $servicios = $args['services'] ?? array();
 					<div style="height:400px;background-color:red;">
 					https://icons8.com/icon/set/computer/emoji
 					https://dribbble.com/shots/14586924-Hero-Header-Adelfox-2
-https://www.behance.net/gallery/107296295/Adelfox-2-Teaser-Shots?tracking_source=search_projects|adelfox
+					https://www.behance.net/gallery/107296295/Adelfox-2-Teaser-Shots?tracking_source=search_projects|adelfox
 					https://www.behance.net/gallery/178139617/Echo-Website-Hero-Header-Builder?tracking_source=project_owner_other_projects
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container pb-3">
+
+	<div class="container pt-5 pb-3">
 		<div class="row">
 			<?php
 			foreach( $servicios as $servicio ) {
