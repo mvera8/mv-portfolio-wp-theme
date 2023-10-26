@@ -42,3 +42,9 @@ $preguntas = array(
 		'text'  => 'Una vez entregado el proyecto se da por cerrado...',
 	),
 );
+
+$args = array (
+	'post_type'      => 'post',
+	'posts_per_page' => '3',
+);
+

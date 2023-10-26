@@ -17,7 +17,9 @@ function get_component( $name, $args = null ) {
 		$style_path    = '/source/css/components/' . $name . '.css';
 		$js_path       = '/source/js/components/' . $name . '.js';
 
-		get_template_part( 'components/' . $name, null, $args );
+		ob_start(); // Start output buffering
+		get_template_part('components/' . $name, null, $args);
+		$child = ob_get_clean(); // Get the output buffer contents and clean the buffer
 
 		if ( $style_path && file_exists( get_template_directory() . $style_path ) ) {
 			$style_version = $theme_version . '.' . filemtime( get_template_directory() . $style_path );
@@ -28,5 +30,12 @@ function get_component( $name, $args = null ) {
 			$js_version = $theme_version . '.' . filemtime( get_template_directory() . $js_path );
 			wp_enqueue_script( $name . '-script', get_template_directory_uri() . $js_path, array(), $js_version );
 		}
+
+		return $child;
 	}
+	
+}
+
+function the_component( $name, $args = null ) {
+	echo get_component( $name, $args );
 }

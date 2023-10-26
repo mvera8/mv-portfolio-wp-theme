@@ -17,17 +17,15 @@ $servicios = $args['services'] ?? array();
 	<div class="container mb-5">
 		<div class="row align-items-center">
 			<div class="col-6">
-				<div class="pe-5">
-					<span class="lala">Ready to Use Tailwind CSS Web Template.</span>
-					<h1 class="mb-4">Tailwind Template for <span class="text-gradient">App & Software</span> Site.</h1><!-- Web Developer / UI/UX Designer/ QA Tester -->
-					<p class="lead text-gray-200 pe-5">All in one Tailwind CSS site template for - App and Software sites Comes with all essential components. <?php get_emoji( 'sunglasses', 30 ); ?></p>
-					<a href="#" class="btn btn-dark btn-lg me-3">
-						Download Now
-					</a>
-					<button type="button" class="btn btn-outline-dark btn-lg text-success" data-toggle="modal" data-target="#exampleModal">
-						<div class="lala">Watch Demo</div> See how it works
-					</button>
-				</div>
+				<span class="lala">Ready to Use Tailwind CSS Web Template.</span>
+				<h1 class="mb-4 display-2">Tailwind Template for <span class="text-gradient">App & Software</span> Site.</h1><!-- Web Developer / UI/UX Designer/ QA Tester -->
+				<p class="lead text-gray-200 pe-5">All in one Tailwind CSS site template for - App and Software sites Comes with all essential components. <?php get_emoji( 'sunglasses', 30 ); ?></p>
+				<a href="#" class="btn btn-dark btn-lg me-3">
+					Download Now
+				</a>
+				<button type="button" class="btn btn-outline-dark btn-lg text-success" data-toggle="modal" data-target="#exampleModal">
+					<div class="lala">Watch Demo</div> See how it works
+				</button>
 			</div>
 			<div class="col-5 offset-md-1">
 				<div class="position-relative">

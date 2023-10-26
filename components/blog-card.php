@@ -1,6 +1,6 @@
 <?php
 /**
- * Component: Card
+ * Component: Blog Card
  *
  * @package supercampeones
  */
@@ -10,21 +10,9 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="col-4">
-	<?php
-	if ( has_post_thumbnail() ) {
-		echo sprintf(
-			'<a href="%s" class="text-decoration-none">%s</a>',
-			get_the_permalink(),
-			get_the_post_thumbnail( '', array('class' => 'img-fluid') ),
-		);
-	}
-
-	echo sprintf(
-		'<a href="%s" class="text-decoration-none">%s</a>',
-		get_the_permalink(),
-		the_title( '<h4 class="my-4">', '</h4>', false ),
-	);
-
-	the_excerpt();
-	?>
+	<?php if ( has_post_thumbnail() ) { ?>
+		<a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_post_thumbnail( 'medium', array('class' => 'img-fluid w-100 mb-4 rounded') ); ?></a>
+	<?php } ?>
+	<a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title( '<h4 class="my-4">', '</h4>' ); ?></a>
+	<?php the_excerpt(); ?>
 </div>

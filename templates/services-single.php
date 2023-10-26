@@ -12,46 +12,88 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+$criticals = array(
+	'navbar',
+);
+set_query_var( 'portfolio_critical', $criticals );
+
 $site_name = get_bloginfo( 'name' );
 
 get_header();
-get_component( 'navbar', ['brand' => $site_name] );
+the_component( 'navbar', ['brand' => $site_name] );
 ?>
 
 <section class="pt-5 text-center border-bottom">
-    <h1 class="display-4">Centered screenshot</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-      </div>
-    </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
-      <div class="container px-5">
-        <img src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-<section class="py-5">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 text-center">
-				<h2>We treat our clients like family with an unparalleled level of service.</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet arcu vitae mauris vehicula placerat a eu urna. Sed at imperdiet nibh. Praesent a hendrerit lorem, et varius ligula. Nulla pretium erat eu accumsan mollis. </p>
+			<div class="col-12 col-md-7">
+				<h1 class="px-5 mb-4 display-2">Figma to <div class="text-gradient">{WordPress}</div> quicly and easy.</h1>
+				<p class="mb-5 text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel libero odio. Phasellus aliquam feugiat elit, sed mollis neque bibendum lacinia.</p>
+				<button type="button" class="btn btn-primary btn-lg">Primary button</button>
 			</div>
+		</div>
+	</div>
+	<div class="overflow-hidden pt-5" style="max-height: 30vh;">
+		<div class="container px-5">
+			<img src="https://getbootstrap.com/docs/5.0/examples/heroes/bootstrap-docs.png" class="img-fluid rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500">
 		</div>
 	</div>
 </section>
 
-<section class="py-5">
-	<div class="container">
-		<?php
-		the_content();
-		?>
-	</div>
-</section>
+<?php
+the_section(
+    'white',
+		[
+			get_component(
+				'content-middle',
+				[
+					'title' => 'Dedicated space for conversations',
+					'text'  => 'Decrease the burden of managing active work in issues and pull requests by providing a separate space to host ongoing discussions, questions, and ideas.',
+				]
+			)
+		]
+);
+
+the_section(
+    'white',
+		[
+			get_component(
+				'content-right',
+				[
+					'image' => 'https://placehold.co/600x400',
+					'text'  => 'Decrease the burden of managing active work in issues and pull requests by providing a separate space to host ongoing discussions, questions, and ideas.',
+				]
+			)
+		]
+);
+
+the_section(
+    'white',
+		[
+			get_component(
+				'content-right',
+				[
+					'image' => 'https://placehold.co/600x400',
+					'text'  => 'Decrease the burden of managing active work in issues and pull requests by providing a separate space to host ongoing discussions, questions, and ideas.',
+				]
+			)
+		]
+);
+
+the_section(
+    'gray-100',
+		[
+			get_component(
+				'content-middle',
+				[
+					'title' => 'We treat our clients like family with an unparalleled level of service.',
+					'text'  => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet arcu vitae mauris vehicula placerat a eu urna. Sed at imperdiet nibh. Praesent a hendrerit lorem, et varius ligula. Nulla pretium erat eu accumsan mollis.',
+				]
+				),
+				get_component( 'card' )
+		]
+);
+?>
 
 
 <section class="py-5 bg-gray-100">
@@ -59,7 +101,7 @@ get_component( 'navbar', ['brand' => $site_name] );
 
 	<div class="text-center">
 		<h2>We treat our clients like family with an unparalleled level of service.</h2>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet arcu vitae mauris vehicula placerat a eu urna. Sed at imperdiet nibh. Praesent a hendrerit lorem, et varius ligula. Nulla pretium erat eu accumsan mollis. </p>
+				<p class="lead"> </p>
 
 	</div>
 
@@ -67,26 +109,26 @@ get_component( 'navbar', ['brand' => $site_name] );
 		<div class="row">
 
 			<div class="col-md-6">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 			<div class="col-md-3">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 			<div class="col-md-3">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 
 			<div class="col-md-3">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 			<div class="col-md-3">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 			<div class="col-md-3">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 			<div class="col-md-3">
-				<?php get_component( 'card' ); ?>
+				<?php the_component( 'card' ); ?>
 			</div>
 
 		</div>

@@ -21,6 +21,7 @@ $understrap_includes = array(
 	'/nucleus/class-wp-bootstrap-navwalker.php', // Load custom WordPress nav walker.
 	'/nucleus/get-component.php',                // Load get_component() function.
 	'/nucleus/get-image.php',                    // Load get_image() function.
+	'/nucleus/get-section.php',                    // Load get_section() function.
 
 	'/preload.php',                          // Load Font Awesome.
 	'/fontawesome.php',                          // Load Font Awesome.

@@ -9,6 +9,15 @@
 defined( 'ABSPATH' ) || exit;
 
 // https://www.opendoorscareers.com/post-a-job
+// https://github.com/features/discussions
+
+
+
+
+$criticals = array(
+	'navbar',
+);
+set_query_var( 'portfolio_critical', $criticals );
 
 $site_name = get_bloginfo( 'name' );
 $servicios = array(
@@ -38,14 +47,8 @@ $servicios = array(
 	),
 );
 
-
 get_header();
-get_component(
-	'navbar',
-	array(
-		'brand' => $site_name,
-	)
-);
+get_component( 'navbar', ['brand' => $site_name] );
 ?>
 
 <section id="component-hero" class="pt-5">

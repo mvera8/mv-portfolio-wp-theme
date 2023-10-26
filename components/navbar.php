@@ -12,7 +12,7 @@ $brand = $args['brand'] ?? '';
 ?>
 
 <header>
-	<nav id="component-navbar" class="navbar navbar-expand-lg bg-transparent py-2">
+	<nav id="component-navbar" class="navbar navbar-expand-lg bg-transparent py-2 mb-5">
 		<div class="container">
 
 			<a class="navbar-brand" href="<?php echo home_url('/'); ?>">

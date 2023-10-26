@@ -13,12 +13,7 @@ set_query_var( 'portfolio_critical', $criticals );
 $site_name = get_bloginfo( 'name' );
 
 get_header();
-get_component(
-	'navbar',
-	array(
-		'brand' => $site_name,
-	)
-);
+the_component( 'navbar', ['brand' => $site_name] );
 ?>
 
 <section class="py-5">

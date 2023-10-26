@@ -10,7 +10,7 @@ set_query_var( 'portfolio_critical', $criticals );
 $site_name = get_bloginfo( 'name' );
 
 get_header();
-get_component( 'navbar', ['brand' => $site_name] );
+the_component( 'navbar', ['brand' => $site_name] );
 ?>
 
 <main>
@@ -21,7 +21,7 @@ get_component( 'navbar', ['brand' => $site_name] );
 				if ( have_posts()) :
 					while(have_posts()) :
 						the_post();
-						get_component( 'blog-card' );
+						the_component( 'blog-card' );
 					endwhile;
 				endif;
 				?>
